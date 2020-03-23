@@ -34,7 +34,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 MODEL='./my-model-500.meta'
 WEIGHT='./my-model-500'
 BATCH_SIZE = 50
-MAX_ITER = 1000
+MAX_ITER = 2000
 TEST_ITER = 500
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 

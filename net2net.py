@@ -7,6 +7,9 @@ Numpy modules for Net2Net
 Written by Kyunghyun Paeng
 
 """
+#import os
+#os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
 import numpy as np
 
 class Net2Net(object):
