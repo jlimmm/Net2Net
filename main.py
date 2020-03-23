@@ -15,9 +15,15 @@ Net2Net using Tensorflow
 Author: Kyunghyun Paeng
 
 """
+import os
+import tensorflow as tf
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
 import numpy as np
 import scipy.signal
-import tensorflow as tf
 from slim import ops
 from slim import scopes
 from slim import variables
