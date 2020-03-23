@@ -7,8 +7,8 @@ Numpy modules for Net2Net
 Written by Kyunghyun Paeng
 
 """
-#import os
-#os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 import numpy as np
 
@@ -272,11 +272,13 @@ if __name__ == '__main__':
     w1 = np.random.rand(100, 50)
     b1 = np.random.rand(50,1)
     w2 = np.random.rand(50, 10)
-    obj.wider(w1, b1, w2, 70)
+    a, b, c = obj.wider(w1, b1, w2, 70)
     print('Succeed: Net2Wider (fc)')
+    print(a.shape, b.shape, c.shape)
 
     w1 = np.random.rand(3,3,16,32)
     b1 = np.random.rand(32)
     w2 = np.random.rand(3,3,32,64)
-    obj.wider(w1, b1, w2, 48)
+    a, b, c = obj.wider(w1, b1, w2, 48)
     print('Succeed: Net2Wider (conv)')
+    print(a.shape, b.shape, c.shape)

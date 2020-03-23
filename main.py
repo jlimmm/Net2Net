@@ -34,7 +34,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 MODEL='./my-model-500.meta'
 WEIGHT='./my-model-500'
 BATCH_SIZE = 50
-MAX_ITER = 2000
+MAX_ITER = 1000
 TEST_ITER = 500
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
@@ -222,6 +222,7 @@ def train_a_teacher_network():
                 writer.add_summary(summary_str, i)
                 print('[Iter: {}] Validation Accuracy : {:.4f}'.format(i,acc))
                 saver.save(sess, './my-model', global_step=TEST_ITER)
+
 
 def load_teacher_net(sess, model, weights):
     saver = tf.train.import_meta_graph(model)
